@@ -1,0 +1,46 @@
+body {
+    background-color: lightblue;
+}
+
+#cardfront {
+    position: absolute;
+    width: 447px;
+    height: 245px;
+    background-image: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+}
+
+#cardfront > * {
+    margin: 0 2rem;
+}
+
+#cardback {
+    position: relative;
+    top: 260px;
+    left: 50px;
+    width: 447px;
+    height: 245px;
+    background-image: url(images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#card-number {
+    position: relative;
+    top: 150px;
+}
+
+#name-date-container {
+    position: relative;
+    top: 190px;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+#card-cvc {
+    position: relative;
+    top: 112px;
+    left: 370px;
+}
+
