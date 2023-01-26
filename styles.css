@@ -1,9 +1,110 @@
-body {
-    background-color: lightblue;
+:root {
+    font-family: 'Space Grotesk', sans-serif;
+    --light-greyish-violet: hsl(270, 3%, 87%);
+    --dark-greyish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
 }
 
-#cardfront {
+body {
+    background-color: white;
+}
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+#right-side {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    margin: auto;
+}
+
+#left-side {
+    display: flex;
+    height: 100vh;
+    width: 33vw;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+}
+
+#submission-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 275px;
+}
+
+input {
+    font-family: inherit;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    border: 1px solid var(--light-greyish-violet);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: .15rem;
+}
+
+input:focus {
+    outline: 1px solid var(--very-dark-violet);
+    border: none;
+}
+
+label {
+    font-size: .60rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--very-dark-violet);
+}
+
+#name-input, #number-input {
+    width: 100%;
+}
+
+#date-cvc-container {
+    display: flex;
+    width: 100%;
+}
+
+#date {
+    width: 50%;
+}
+
+#date-input-MM, #date-input-YY {
+    width: 40%;
+}
+
+#date-input-YY {
+    margin-left: .5rem;
+}
+
+#cvc {
+    width: 60%;
+}
+
+#confirm {
+    font-family: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--light-greyish-violet);
+    margin-top: 1.5rem;
+    background-color: var(--very-dark-violet);
+    color: var(--light-greyish-violet);
+}
+
+#cards {
     position: absolute;
+    top: 20vh;
+    left: 10vw;
+    color: var(--light-greyish-violet);
+}
+#cardfront {
+    position: relative;
     width: 447px;
     height: 245px;
     background-image: url(images/bg-card-front.png);
@@ -16,23 +117,25 @@ body {
 
 #cardback {
     position: relative;
-    top: 260px;
-    left: 50px;
+    top: 1.5rem;
+    left: 75px;
     width: 447px;
     height: 245px;
     background-image: url(images/bg-card-back.png);
     background-size: contain;
     background-repeat: no-repeat;
+    transition: .5s;
 }
 
 #card-number {
     position: relative;
     top: 150px;
+    font-size: 1.5rem;
 }
 
 #name-date-container {
     position: relative;
-    top: 190px;
+    top: 170px;
     display: flex;
     justify-content: space-between;
     width: 75%;
@@ -40,7 +143,22 @@ body {
 
 #card-cvc {
     position: relative;
-    top: 112px;
-    left: 370px;
+    top: 110px;
+    left: 360px;
 }
 
+@media screen and (max-width: 1300px) {
+    #cardback {
+        left: 0;
+    }
+    
+    #cards {
+        left: 5vw;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #right-side {
+        margin-right: 5vw;
+    }
+}

@@ -11,7 +11,7 @@ const cardDate = document.getElementById('card-date');
 const cvcInput = document.getElementById('cvc-input');
 const cardCvc = document.getElementById('card-cvc');
 
-const confirmButton = document.getElementById('submit');
+const confirmButton = document.getElementById('confirm');
 
 
 confirmButton.addEventListener('click', e => {
@@ -21,7 +21,7 @@ confirmButton.addEventListener('click', e => {
     cardCvc.innerHTML = cvcInput.value;
 });
 
-numberInput.addEventListener('keyup', e => {
+numberInput.addEventListener('keypress', e => {
     if (numberInput.value.length === 4 || numberInput.value.length === 9 || numberInput.value.length === 14) {
         numberInput.value = numberInput.value + ' ';
     }
