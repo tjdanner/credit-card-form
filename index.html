@@ -18,21 +18,25 @@
             <div id="name">
                 <label for="name">Cardholder Name</label><br>
                 <input id="name-input" type="text" autocomplete="off" placeholder="e.g. Jane Appleseed">
+                <span class="error-message" id="name-error-message">Field must not be blank.</span>
             </div>
             <div id="number">
                 <label for="number">Card Number</label><br>
                 <input id="number-input" type="tel" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000"
                     maxlength="19">
+                    <span class="error-message" id="number-error-message">Field must not be blank.</span>
             </div>
             <div id="date-cvc-container">
                 <div id="date">
                     <label for="date">Exp. Date (MM/YY)</label><br>
-                    <input id="date-input-MM" type="tel" autocomplete="off" placeholder="MM" maxlength="2"><input
+                    <input id="date-input-MM" type="tel" autocomplete="off" placeholder="MM" maxlength="2"><span class="error-message" id="date-error-message">Field must not be blank</span><input
                         id="date-input-YY" type="tel" autocomplete="off" placeholder="YY" maxlength="2">
+                        <span class="error-message" id="date-error-message-blank"></span>
                 </div>
                 <div id="cvc">
                     <label for="cvc">CVC</label><br>
                     <input id="cvc-input" type="tel" autocomplete="off" placeholder="e.g. 123" maxlength="3">
+                    <span class="error-message" id="cvc-error-message">Field must not be blank.</span>
                 </div>
             </div>
             <button id="confirm" type="button">Confirm</button>
@@ -44,8 +48,8 @@
         <div id="cardfront">
             <span id="card-number">XXXX XXXX XXXX XXXX</span>
             <div id="name-date-container">
-                <span id="card-name">Felicia Leire</span>
-                <span id="card-date">09/00</span>
+                <span id="card-name">your name</span>
+                <span id="card-date">00/00</span>
             </div>
         </div>
 

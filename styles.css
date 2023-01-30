@@ -37,6 +37,13 @@ body {
     height: 275px;
 }
 
+.error-message {
+    color: red;
+    font-size: .6rem;
+    display: none;
+    position: fixed;
+}
+
 input {
     font-family: inherit;
     padding: .5rem .75rem;
@@ -47,9 +54,12 @@ input {
     margin-top: .15rem;
 }
 
+input::placeholder {
+    color: var(--light-greyish-violet);
+}
+
 input:focus {
     outline: 1px solid var(--very-dark-violet);
-    border: none;
 }
 
 label {
@@ -139,6 +149,7 @@ label {
     display: flex;
     justify-content: space-between;
     width: 75%;
+    text-transform: uppercase;
 }
 
 #card-cvc {
