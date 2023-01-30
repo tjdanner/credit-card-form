@@ -68,7 +68,7 @@ translateInputs = () => {
 
 validateLetters = (userInput) => {
     const letters = /^[A-Za-z]+$/;
-    if(userInput.value.match(letters)) {
+    if (userInput.value.match(letters)) {
         return true;
     } else {
         return false;
@@ -97,6 +97,10 @@ confirmButton.addEventListener('click', e => {
         else {
             allInputs[i].style.borderColor = '';
             errors[i].style.display = '';
+            cardName.innerHTML = nameInput.value;
+            cardNumber.innerHTML = numberInput.value;
+            cardDate.innerHTML = `${dateInputMM.value}/${dateInputYY.value}`
+            cardCvc.innerHTML = cvcInput.value;
         }
     }
 })
