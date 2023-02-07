@@ -13,11 +13,6 @@ const cvcInput = document.getElementById('cvc-input');
 const cardCvc = document.getElementById('card-cvc');
 const confirmButton = document.getElementById('confirm');
 
-/* const alphabet = [...Array(26)].map((_, i) => String.fromCharCode(i + 65));
-const alphabet2 = [...Array(26)].map((_, i) => String.fromCharCode(i + 97));
-
-const fullAlphabet = alphabet.concat(alphabet2); */
-
 
 confirmButton.addEventListener('mouseover', e => {
     confirmButton.style.color = veryDarkViolet;
@@ -27,37 +22,6 @@ confirmButton.addEventListener('mouseover', e => {
         confirmButton.style.backgroundColor = '';
     })
 })
-
-/* confirmButton.addEventListener('click', e => {
-    if (nameInput.value === '' || nameInput.value == null) {
-        document.getElementById('name-error-message').style.display = 'block';
-        nameInput.style.borderColor = 'red';
-    } if (numberInput.value === '' || numberInput.value == null) {
-        document.getElementById('number-error-message').style.display = 'block';
-        numberInput.style.borderColor = 'red';
-        e.preventDefault();
-    } if (dateInputMM.value === '' || dateInputMM.value == null) {
-        document.getElementById('date-error-message').style.display = 'block';
-        dateInputMM.style.borderColor = 'red';
-        e.preventDefault();
-    } if (dateInputYY.value === '' || dateInputYY.value == null) {
-        document.getElementById('date-error-message').style.display = 'block';
-        dateInputYY.style.borderColor = 'red';
-        e.preventDefault();
-    } if (cvcInput.value === '' || cvcInput.value == null) {
-        document.getElementById('cvc-error-message').style.display = 'block';
-        cvcInput.style.borderColor = 'red';
-        e.preventDefault();
-    } else {
-        for (let i = 0; i < allInputs.length; i++) {
-            allInputs[i].style.borderColor = '';
-        }
-        cardName.innerHTML = nameInput.value;
-        cardNumber.innerHTML = numberInput.value;
-        cardDate.innerHTML = `${dateInputMM.value}/${dateInputYY.value}`
-        cardCvc.innerHTML = cvcInput.value;
-    }
-}); */
 
 translateInputs = () => {
     cardName.innerHTML = nameInput.value;
